@@ -1,0 +1,399 @@
+/* CSS Variables & Reset */
+:root {
+    --bg-deep-black: #050507;
+    --accent-green: #7cfc00; 
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --font-header: 'Bebas Neue', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'Share Tech Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-deep-black);
+    background-image: radial-gradient(circle at 80% 20%, rgba(76, 29, 149, 0.18) 0%, transparent 50%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-main);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 95px; 
+}
+
+/* Top Bar */
+.top-bar {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--font-header);
+    background: rgba(5, 5, 7, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    flex-shrink: 0;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+}
+
+.live-dot {
+    width: 8px; height: 8px;
+    background-color: var(--accent-green);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-green);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    50% { transform: scale(1.15); opacity: 1; box-shadow: 0 0 12px var(--accent-green); }
+    100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+/* Main Workspace */
+.contact-workspace {
+    position: relative;
+    z-index: 5;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contact-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section-title-wrapper {
+    text-align: center;
+}
+
+.contact-header {
+    font-family: var(--font-header);
+    font-size: 3.4rem;
+    color: var(--accent-green);
+    letter-spacing: 2px;
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(124, 252, 0, 0.2);
+}
+
+.contact-sub {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+/* Two Column Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Cards styling with Viewfinder Corners */
+.contact-info-card, .contact-form-card {
+    background: rgba(18, 18, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Corners */
+.corner {
+    position: absolute;
+    width: 10px; height: 10px;
+    border-color: var(--accent-green);
+    border-style: solid;
+    pointer-events: none;
+}
+.tl { top: 8px; left: 8px; border-width: 2px 0 0 2px; }
+.tr { top: 8px; right: 8px; border-width: 2px 2px 0 0; }
+.bl { bottom: 8px; left: 8px; border-width: 0 0 2px 2px; }
+.br { bottom: 8px; right: 8px; border-width: 0 2px 2px 0; }
+
+.track-id {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.contact-info-card h3 {
+    font-family: var(--font-header);
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    margin-top: 4px;
+    color: var(--text-main);
+}
+
+/* Contact Methods list */
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.method-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 14px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.method-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(124, 252, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.method-icon {
+    font-size: 1.2rem;
+    color: var(--accent-green);
+}
+
+.method-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.method-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+}
+
+.method-value {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* Social Section */
+.social-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 16px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 14px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.social-btn:hover {
+    background: rgba(124, 252, 0, 0.05);
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+}
+
+/* Contact Form Styling */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.form-group input, 
+.form-group textarea {
+    background: rgba(5, 5, 7, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 12px 14px;
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: var(--accent-green);
+}
+
+.submit-btn {
+    margin-top: 4px;
+    background: var(--accent-green);
+    color: #000;
+    font-family: var(--font-header);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: #6be000;
+    box-shadow: 0 0 15px rgba(124, 252, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.form-status-msg {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--accent-green);
+    min-height: 20px;
+}
+
+/* CapCut Timeline Navbar Permanently Fixed at the Bottom */
+.timeline-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(5, 5, 7, 0.95);
+    backdrop-filter: blur(8px);
+    border-top: 2px solid #13131c;
+    padding: 10px 20px 12px 20px;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.timeline-tracks {
+    display: flex;
+    gap: 3px;
+    background: #020203;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #161622;
+}
+
+.clip {
+    position: relative;
+    flex: 1;
+    background: #161622;
+    padding: 10px 6px;
+    text-align: center;
+    text-decoration: none;
+    color: #a1a1aa;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    border-left: 3px solid #3b82f6;
+}
+
+.cut-marker {
+    position: absolute;
+    right: -2px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--bg-deep-black);
+}
+
+.clip:hover {
+    background: #232336;
+    color: var(--text-main);
+    transform: translateY(-2px);
+    border-left-color: var(--accent-green);
+}
+
+.clip.active {
+    background: #1d4ed8;
+    color: var(--text-main);
+    border-left-color: #60a5fa;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Mobile & Tablets)
+   ========================================= */
+
+@media (max-width: 900px) {
+    body {
+        padding-bottom: 85px;
+    }
+
+    .contact-workspace { 
+        padding: 20px 15px; 
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-header {
+        font-size: 2.6rem;
+    }
+    
+    .clip {
+        font-size: 0.65rem;
+        padding: 8px 3px;
+    }
+}

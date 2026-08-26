@@ -1,0 +1,334 @@
+/* CSS Variables & Reset */
+:root {
+    --bg-deep-black: #050507;
+    --accent-green: #7cfc00; 
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --font-header: 'Bebas Neue', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'Share Tech Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-deep-black);
+    /* Pure black background with a small, soft purple gradient accent (no grid) */
+    background-image: radial-gradient(circle at 80% 20%, rgba(76, 29, 149, 0.22) 0%, transparent 55%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-main);
+    font-family: var(--font-body);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Top Bar */
+.top-bar {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--font-header);
+    background: rgba(5, 5, 7, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    flex-shrink: 0;
+}
+
+/* Main Workspace */
+.about-workspace {
+    position: relative;
+    z-index: 5;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 40px;
+    max-width: 1250px;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Two Column Section Layout */
+.about-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+    max-height: 100%;
+}
+
+/* Left Side: Text Area */
+.about-text-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-header {
+    font-family: var(--font-header);
+    font-size: 3.4rem;
+    color: var(--accent-green);
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-shadow: 0 0 20px rgba(124, 252, 0, 0.2);
+}
+
+.about-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.bio-intro, .bio-diff {
+    color: #cbd5e1;
+}
+
+/* One-line philosophy / voice style */
+.philosophy-line {
+    font-style: italic;
+    color: var(--accent-green);
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.9rem;
+    border-left: 2px solid var(--accent-green);
+    padding-left: 12px;
+    margin-top: 2px;
+}
+
+/* Resume Download Button */
+.resume-btn-container {
+    margin-top: 5px;
+}
+
+.resume-btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 9px 22px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.25s ease;
+}
+
+.resume-btn:hover {
+    background: var(--accent-green);
+    color: #000;
+    border-color: var(--accent-green);
+    box-shadow: 0 0 15px rgba(124, 252, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Right Side: Video Frame */
+.about-video-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.video-frame {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 9 / 13;
+    max-height: 65vh; /* Prevents it from spilling past the bottom boundary */
+    background: #000;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.85);
+    overflow: hidden;
+}
+
+/* Viewfinder Corners */
+.corner {
+    position: absolute;
+    width: 12px; height: 12px;
+    border-color: var(--accent-green);
+    border-style: solid;
+    z-index: 2;
+    pointer-events: none;
+}
+.tl { top: 10px; left: 10px; border-width: 2px 0 0 2px; }
+.tr { top: 10px; right: 10px; border-width: 2px 2px 0 0; }
+.bl { bottom: 10px; left: 10px; border-width: 0 0 2px 2px; }
+.br { bottom: 10px; right: 10px; border-width: 0 2px 2px 0; }
+
+.playhead-line {
+    position: absolute; top: 0; left: 50%;
+    width: 1px; height: 100%;
+    background: rgba(124, 252, 0, 0.3);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.about-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(1.05) saturate(1.05);
+}
+
+/* CapCut Timeline Navbar strictly anchored at the Bottom */
+.timeline-nav {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    z-index: 10;
+    background: rgba(5, 5, 7, 0.92);
+    backdrop-filter: blur(8px);
+    border-top: 2px solid #13131c;
+    padding: 8px 20px 10px 20px;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.timeline-tracks {
+    display: flex;
+    gap: 3px;
+    background: #020203;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #161622;
+}
+
+.clip {
+    position: relative;
+    flex: 1;
+    background: #161622;
+    padding: 8px 6px;
+    text-align: center;
+    text-decoration: none;
+    color: #a1a1aa;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    border-left: 3px solid #3b82f6;
+}
+
+.cut-marker {
+    position: absolute;
+    right: -2px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--bg-deep-black);
+}
+
+.clip:hover {
+    background: #232336;
+    color: var(--text-main);
+    transform: translateY(-2px);
+    border-left-color: var(--accent-green);
+}
+
+.clip.active {
+    background: #1d4ed8;
+    color: var(--text-main);
+    border-left-color: #60a5fa;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Mobile & Tablets)
+   ========================================= */
+
+@media (max-width: 900px) {
+    body {
+        overflow-y: auto;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .about-workspace { 
+        padding: 25px 15px 90px 15px; 
+    }
+    
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .about-text-side {
+        align-items: center;
+    }
+
+    .about-header {
+        font-size: 3rem;
+    }
+
+    .philosophy-line {
+        border-left: none;
+        border-top: 2px solid var(--accent-green);
+        padding-left: 0;
+        padding-top: 10px;
+        margin: 10px auto 0 auto;
+    }
+    
+    .video-frame {
+        max-width: 320px;
+        max-height: none;
+        margin: 0 auto;
+    }
+    
+    .timeline-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+    
+    .clip {
+        font-size: 0.65rem;
+        padding: 8px 3px;
+    }
+}
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+}
+
+.live-dot {
+    width: 8px; height: 8px;
+    background-color: var(--accent-green);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-green);
+    animation: pulse 2s infinite;
+}

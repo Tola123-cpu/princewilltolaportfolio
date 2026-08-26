@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Me | Princewill Tola</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about.style.css">
+</head>
+<body>
+
+    <!-- Top Utility Bar -->
+    <header class="top-bar">
+        <div class="brand">PRINCEWILL TOLA</div>
+        <div class="status-indicator">STATUS: <span class="live-dot"></span> AVAILABLE FOR HIRE</div>
+
+    </header>
+
+    <!-- Main About Content Area -->
+    <main class="about-workspace">
+        
+        <!-- Two-Section Layout: Left Text & Right Video -->
+        <section class="about-container">
+            
+            <!-- Left Side: Text, Identity, Differentiator, Philosophy & Resume Button -->
+            <div class="about-text-side">
+                <h1 class="about-header">ABOUT ME</h1>
+                
+                <div class="about-body">
+                    <p class="bio-intro">
+                        I am Princewill Tola, a Lagos-based Creative Director, Videographer, and Photographer driven by the art of visual storytelling. I transform raw ideas into striking motion and imagery.
+                    </p>
+                    <p class="bio-diff">
+                        What sets me apart is combining hands-on production craft with an AI-assisted pipeline (Runway, ElevenLabs, Luma AI) that most directors aren't using yet.
+                    </p>
+                    <div class="philosophy-line">
+                        "Visuals shouldn't just look good — they should command attention and move culture."
+                    </div>
+                </div>
+
+                <div class="resume-btn-container">
+                    <!-- Replace 'resume.pdf' with your actual resume file path -->
+                    <a href="resume.pdf" target="_blank" class="resume-btn">Download Resume ↓</a>
+                </div>
+            </div>
+
+            <!-- Right Side: Video Section -->
+            <div class="about-video-side">
+                <div class="video-frame">
+                    <div class="corner tl"></div><div class="corner tr"></div>
+                    <div class="corner bl"></div><div class="corner br"></div>
+                    <div class="playhead-line"></div>
+                    
+                    <div class="video-wrapper">
+                        <!-- Replace 'about-video.mp4' with your actual introduction video file name -->
+                        <video controls autoplay muted loop playsinline class="about-video">
+                            <source src="about-video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- CapCut-Style Timeline Navbar Fixed at the Bottom -->
+    <nav class="timeline-nav">
+        <div class="timeline-header">
+            <span>TIMELINE TRACK V1</span>
+            <span class="zoom-level">100%</span>
+        </div>
+        <div class="timeline-tracks">
+            <a href="index.html" class="clip">
+                <span class="clip-label">Home</span>
+                <span class="cut-marker"></span>
+            </a>
+            <a href="about.html" class="clip active">
+                <span class="clip-label">About Me</span>
+                <span class="cut-marker"></span>
+            </a>
+            <a href="services.html" class="clip">
+                <span class="clip-label">Services</span>
+                <span class="cut-marker"></span>
+            </a>
+            <a href="#gallery" class="clip">
+                <span class="clip-label">Gallery & Works</span>
+                <span class="cut-marker"></span>
+            </a>
+            <a href="contact.html" class="clip">
+                <span class="clip-label">Contact Me</span>
+                <span class="cut-marker"></span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- JavaScript File -->
+    <script src="about.script.js"></script>
+</body>
+</html>

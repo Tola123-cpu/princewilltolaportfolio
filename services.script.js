@@ -1,0 +1,4 @@
+// Services page script initialization
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Services page loaded successfully.");
+});
