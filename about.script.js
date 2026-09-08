@@ -1,4 +1,21 @@
-// Script file ready for any custom interactive events on the About Me page
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("About Me page loaded successfully.");
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileNav = document.getElementById("mobileNav");
+
+    if (menuToggle && mobileNav) {
+        menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("active");
+            mobileNav.classList.toggle("open");
+            document.body.style.overflow = mobileNav.classList.contains("open") ? "hidden" : "";
+        });
+
+        // Close menu when clicking any mobile link
+        document.querySelectorAll(".mobile-link").forEach(link => {
+            link.addEventListener("click", () => {
+                menuToggle.classList.remove("active");
+                mobileNav.classList.remove("open");
+                document.body.style.overflow = "";
+            });
+        });
+    }
 });

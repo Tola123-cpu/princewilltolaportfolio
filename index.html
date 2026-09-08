@@ -3,102 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Princewill Tola | Creative Director, Videographer/Photographer</title>
+    <title>Princewill Tola | Photographer & Videographer</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.style.css">
 </head>
 <body>
 
-    <!-- Background Fading Video Element -->
-    <div class="video-bg-container">
-        <video autoplay muted loop playsinline class="bg-video">
-            <!-- Make sure your video file is named background.mp4 or change it here -->
-            <source src="background.mp4" type="video/mp4">
-        </video>
-        <div class="video-overlay"></div>
-    </div>
-
-    <!-- Top Utility Bar -->
+    <!-- Minimalist Top Bar -->
     <header class="top-bar">
-        <div class="brand">PRINCEWILL TOLA</div>
-        <div class="status-indicator">STATUS: <span class="live-dot"></span> AVAILABLE FOR HIRE</div>
+        <a href="index.html" class="brand">Princewill<span class="dot">.</span></a>
+        
+        <!-- Desktop Nav Links -->
+        <nav class="nav-links">
+            <a href="about.html">About Me</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Hire Me</a>
+        </nav>
+
+        <div class="top-actions">
+            <a href="contact.html" class="cta-badge desktop-only">princewill3399@gmail.com</a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="workspace">
-        
-        <!-- Top Area: The H1 Big Headline (Retype Text) -->
-        <div class="headline-container">
-            <span id="typed-text" class="typed-header"></span><span class="cursor">|</span>
+    <!-- Mobile Navigation Overlay Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-content">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">About Me</a>
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="gallery.html" class="mobile-link">Gallery</a>
+            <a href="contact.html" class="mobile-link highlight">Hire Me</a>
+            <div class="mobile-footer-info">
+                <span>based in Lagos, Nigeria</span>
+                <a href="mailto:princewill3399@gmail.com">princewill3399@gmail.com</a>
+            </div>
         </div>
+    </div>
 
-        <!-- Middle Area: Perfectly Centered Proportional Layout -->
-        <section class="middle-row">
+    <!-- Main Hero Workspace -->
+    <main class="hero-workspace">
+        <div class="hero-container">
             
-            <!-- Left: Name in Horizontal Form (Two Lines) + Small Intro Text -->
-            <div class="side-label left-label">
-                <span class="line-1">Princewill</span>
-                <span class="line-2">Tola</span>
-                <div class="intro-text">
-                    Creative direction for brands that can't afford to look ordinary<br>Visual stories for luxury, real estate, and brands that move fast.
+            <!-- Introduction Subtitle -->
+            <div class="hero-intro">
+                <span class="wave-emoji">👋</span>, my name is Princewill and I am a freelance
+            </div>
+
+            <!-- Giant Split Typography Header with Portrait & Interactive Element -->
+            <div class="hero-typography-wrapper">
+                <h1 class="hero-title">
+                    <span class="solid-text">
+                        Photo
+                        <!-- Interactive Circular Arrow pointing to Gallery / Reels -->
+                        <span class="inline-badge" onclick="window.location.href='gallery.html'" title="View Reels & Gallery">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </span>
+                        grapher
+                    </span>
+                    <!-- Stacked Videographer Text: Video up, grapher down -->
+                    <span class="outline-text">
+                        <span class="video-line">&amp; Video</span>
+                        <span class="grapher-line">grapher</span>
+                    </span>
+                </h1>
+                
+                <!-- Central Portrait Graphic Layer -->
+                <div class="portrait-container">
+                    <img src="portrait.jpg" alt="Princewill Tola Portrait" class="hero-portrait" onerror="this.style.display='none'">
                 </div>
             </div>
-            
-            <!-- Center Canvas: The Profile Picture -->
-            <div class="canvas-section">
-                <div class="canvas-frame">
-                    <div class="corner tl"></div><div class="corner tr"></div>
-                    <div class="corner bl"></div><div class="corner br"></div>
-                    <div class="playhead-line"></div>
-                    <div class="canvas-image-wrapper">
-                        <!-- Replace 'profile.jpg' with your actual image file name -->
-                        <img src="profile.jpg" alt="Princewill Tola" class="portfolio-img">
-                    </div>
+
+            <!-- Bottom Row: Location & Client Logos -->
+            <div class="hero-footer-row">
+                <div class="location-text">
+                    based in Lagos, Nigeria.
+                </div>
+                <div class="client-logos">
+                    <span class="client-logo">Lucrezia</span>
+                    <span class="client-logo">Sujimoto</span>
+                    <span class="client-logo">GTCO</span>
+                    <span class="client-logo">Haansbro</span>
+                    <span class="client-logo">McVitie's Nigeria</span>
                 </div>
             </div>
 
-            <!-- Right: Location in Horizontal Form (Two Lines) -->
-            <div class="side-label right-label">
-                <span class="line-1">Location:</span>
-                <span class="line-2">Lagos, Nigeria</span>
+            <!-- Dual Choice CTA Buttons at the bottom -->
+            <div class="hero-cta-buttons">
+                <a href="contact.html?service=photography" class="choice-btn solid">You need a photographer</a>
+                <a href="contact.html?service=videography" class="choice-btn outlined">You need a videographer</a>
             </div>
-        </section>
 
+        </div>
     </main>
 
-    <!-- CapCut-Style Timeline Navbar Fixed at the Bottom -->
-    <nav class="timeline-nav">
-        <div class="timeline-header">
-            <span>TIMELINE TRACK V1</span>
-            <span class="zoom-level">100%</span>
-        </div>
-        <div class="timeline-tracks">
-            <a href="#home" class="clip active">
-                <span class="clip-label">Home</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="about.html" class="clip">
-                <span class="clip-label">About Me</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="#projects" class="clip">
-                <span class="clip-label">Services</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="#gallery" class="clip">
-                <span class="clip-label">Gallery & Works</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="contact.html" class="clip">
-                <span class="clip-label">Contact Me</span>
-                <span class="cut-marker"></span>
-            </a>
-        </div>
-    </nav>
-
-    <!-- JavaScript File -->
-    <script src="script.js"></script>
+    <!-- JavaScript File for Toggle Menu -->
+    <script src="index.script.js"></script>
 </body>
 </html>

@@ -3,143 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Gallery | Princewill Tola</title>
+    <title>Gallery & Reels | Princewill Tola</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="gallery.style.css">
 </head>
 <body>
 
-    <!-- Top Utility Bar -->
+    <!-- Minimalist Top Bar -->
     <header class="top-bar">
-        <div class="brand">PRINCEWILL TOLA</div>
-        <div class="status-indicator">STATUS: <span class="live-dot"></span> AVAILABLE FOR HIRE</div>
+        <a href="index.html" class="brand">Princewill<span class="dot">.</span></a>
+        
+        <!-- Desktop Nav Links -->
+        <nav class="nav-links">
+            <a href="about.html">About Me</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html" class="active-link">Gallery</a>
+            <a href="contact.html">Hire Me</a>
+        </nav>
+
+        <div class="top-actions">
+            <a href="contact.html" class="cta-badge desktop-only">princewill3399@gmail.com</a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
     </header>
 
-    <!-- Main Gallery Workspace (Instagram Grid Style) -->
+    <!-- Mobile Navigation Overlay Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-content">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">About Me</a>
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="gallery.html" class="mobile-link">Gallery</a>
+            <a href="contact.html" class="mobile-link highlight">Hire Me</a>
+            <div class="mobile-footer-info">
+                <span>based in Lagos, Nigeria</span>
+                <a href="mailto:princewill3399@gmail.com">princewill3399@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Gallery Reels Workspace -->
     <main class="gallery-workspace">
         <div class="gallery-container">
-            
-            <div class="section-title-wrapper">
+            <div class="gallery-header-area">
                 <h1 class="gallery-header">REELS & GALLERY</h1>
-                <p class="gallery-sub">Tap any video to view my previous projects</p>
+                <p class="gallery-sub">A curated vertical reel feed showcasing motion, cinematography, and commercial frames.</p>
             </div>
 
-            <!-- IG Grid Layout (Rows & Columns) -->
-            <div class="ig-grid">
-
-                <!-- GRID ITEM 1 -->
-                <div class="ig-grid-item" onclick="openModal(0)">
-                    <video class="grid-thumb" muted preload="metadata">
-                        <source src="reel1.mp4" type="video/mp4">
-                    </video>
-                    <div class="grid-overlay">
-                        <span class="ig-icon">▶</span>
+            <!-- Vertical Reel Feed Layout (Grid of 6: 3 columns, 2 rows) -->
+            <div class="reels-feed">
+                
+                <!-- Reel Item 1 -->
+                <div class="reel-card">
+                    <div class="reel-video-wrapper">
+                        <video controls muted loop playsinline class="reel-media">
+                            <source src="reel-1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="reel-overlay-info"></div>
                     </div>
                 </div>
 
-                <!-- GRID ITEM 2 -->
-                <div class="ig-grid-item" onclick="openModal(1)">
-                    <video class="grid-thumb" muted preload="metadata">
-                        <source src="reel2.mp4" type="video/mp4">
-                    </video>
-                    <div class="grid-overlay">
-                        <span class="ig-icon">▶</span>
+                <!-- Reel Item 2 -->
+                <div class="reel-card">
+                    <div class="reel-video-wrapper">
+                        <video controls muted loop playsinline class="reel-media">
+                            <source src="reel-2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="reel-overlay-info"></div>
                     </div>
                 </div>
 
-                <!-- GRID ITEM 3 -->
-                <div class="ig-grid-item" onclick="openModal(2)">
-                    <video class="grid-thumb" muted preload="metadata">
-                        <source src="reel1.mp4" type="video/mp4">
-                    </video>
-                    <div class="grid-overlay">
-                        <span class="ig-icon">▶</span>
+                <!-- Reel Item 3 -->
+                <div class="reel-card">
+                    <div class="reel-video-wrapper">
+                        <video controls muted loop playsinline class="reel-media">
+                            <source src="reel-3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="reel-overlay-info"></div>
                     </div>
                 </div>
 
-                <!-- GRID ITEM 4 -->
-                <div class="ig-grid-item" onclick="openModal(3)">
-                    <video class="grid-thumb" muted preload="metadata">
-                        <source src="reel2.mp4" type="video/mp4">
-                    </video>
-                    <div class="grid-overlay">
-                        <span class="ig-icon">▶</span>
+                <!-- Reel Item 4 -->
+                <div class="reel-card">
+                    <div class="reel-video-wrapper">
+                        <video controls muted loop playsinline class="reel-media">
+                            <source src="reel-4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="reel-overlay-info"></div>
                     </div>
                 </div>
 
-                <!-- GRID ITEM 5 -->
-                <div class="ig-grid-item" onclick="openModal(4)">
-                    <video class="grid-thumb" muted preload="metadata">
-                        <source src="reel1.mp4" type="video/mp4">
-                    </video>
-                    <div class="grid-overlay">
-                        <span class="ig-icon">▶</span>
+                <!-- Reel Item 5 -->
+                <div class="reel-card">
+                    <div class="reel-video-wrapper">
+                        <video controls muted loop playsinline class="reel-media">
+                            <source src="reel-5.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="reel-overlay-info"></div>
                     </div>
                 </div>
 
-                <!-- GRID ITEM 6 -->
-                <div class="ig-grid-item" onclick="openModal(5)">
-                    <video class="grid-thumb" muted preload="metadata">
-                        <source src="reel2.mp4" type="video/mp4">
-                    </video>
-                    <div class="grid-overlay">
-                        <span class="ig-icon">▶</span>
+                <!-- Reel Item 6 -->
+                <div class="reel-card">
+                    <div class="reel-video-wrapper">
+                        <video controls muted loop playsinline class="reel-media">
+                            <source src="reel-6.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="reel-overlay-info"></div>
                     </div>
                 </div>
 
             </div>
-
         </div>
     </main>
 
-    <!-- IMMERSIVE IG PLAYER MODAL -->
-    <div id="reelModal" class="modal-backdrop">
-        <button class="modal-close" onclick="closeModal()">✕</button>
-        <button class="modal-nav prev-btn" onclick="prevReel()">❮</button>
-        
-        <div class="modal-content-frame">
-            <div class="corner tl"></div><div class="corner tr"></div>
-            <div class="corner bl"></div><div class="corner br"></div>
-            <div class="playhead-line"></div>
-            
-            <video id="modalVideo" class="modal-video-player" controls autoplay playsinline>
-                <source id="modalSource" src="" type="video/mp4">
-            </video>
+    <!-- Minimalist Footer -->
+    <footer class="footer-bar">
+        <div class="location-text">based in Lagos, Nigeria.</div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Hire Me</a>
         </div>
-
-        <button class="modal-nav next-btn" onclick="nextReel()">❯</button>
-    </div>
-
-    <!-- CapCut-Style Timeline Navbar Fixed at the Bottom -->
-    <nav class="timeline-nav">
-        <div class="timeline-header">
-            <span>TIMELINE TRACK V1</span>
-            <span class="zoom-level">100%</span>
-        </div>
-        <div class="timeline-tracks">
-            <a href="index.html" class="clip">
-                <span class="clip-label">Home</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="about.html" class="clip">
-                <span class="clip-label">About Me</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="services.html" class="clip">
-                <span class="clip-label">Services</span>
-                <span class="cut-marker"></span>
-            <a href="gallery.html" class="clip active">
-                <span class="clip-label">Gallery & Works</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="contact.html" class="clip">
-                <span class="clip-label">Contact Me</span>
-                <span class="cut-marker"></span>
-            </a>
-        </div>
-    </nav>
+    </footer>
 
     <!-- JavaScript File -->
     <script src="gallery.script.js"></script>

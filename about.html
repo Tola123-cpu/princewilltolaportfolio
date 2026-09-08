@@ -6,23 +6,52 @@
     <title>About Me | Princewill Tola</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="about.style.css">
 </head>
 <body>
 
-    <!-- Top Utility Bar -->
+    <!-- Minimalist Top Bar -->
     <header class="top-bar">
-        <div class="brand">PRINCEWILL TOLA</div>
-        <div class="status-indicator">STATUS: <span class="live-dot"></span> AVAILABLE FOR HIRE</div>
+        <a href="index.html" class="brand">Princewill<span class="dot">.</span></a>
+        
+        <!-- Desktop Nav Links -->
+        <nav class="nav-links">
+            <a href="about.html" class="active-link">About Me</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Hire Me</a>
+        </nav>
 
+        <div class="top-actions">
+            <a href="contact.html" class="cta-badge desktop-only">princewill3399@gmail.com</a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
     </header>
+
+    <!-- Mobile Navigation Overlay Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-content">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">About Me</a>
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="gallery.html" class="mobile-link">Gallery</a>
+            <a href="contact.html" class="mobile-link highlight">Hire Me</a>
+            <div class="mobile-footer-info">
+                <span>based in Lagos, Nigeria</span>
+                <a href="mailto:princewill3399@gmail.com">princewill3399@gmail.com</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Main About Content Area -->
     <main class="about-workspace">
-        
-        <!-- Two-Section Layout: Left Text & Right Video -->
-        <section class="about-container">
+        <div class="about-container">
             
             <!-- Left Side: Text, Identity, Differentiator, Philosophy & Resume Button -->
             <div class="about-text-side">
@@ -41,20 +70,14 @@
                 </div>
 
                 <div class="resume-btn-container">
-                    <!-- Replace 'resume.pdf' with your actual resume file path -->
                     <a href="resume.pdf" target="_blank" class="resume-btn">Download Resume ↓</a>
                 </div>
             </div>
 
-            <!-- Right Side: Video Section -->
+            <!-- Right Side: Clean Video Presentation Section -->
             <div class="about-video-side">
                 <div class="video-frame">
-                    <div class="corner tl"></div><div class="corner tr"></div>
-                    <div class="corner bl"></div><div class="corner br"></div>
-                    <div class="playhead-line"></div>
-                    
                     <div class="video-wrapper">
-                        <!-- Replace 'about-video.mp4' with your actual introduction video file name -->
                         <video controls autoplay muted loop playsinline class="about-video">
                             <source src="about-video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
@@ -63,39 +86,19 @@
                 </div>
             </div>
 
-        </section>
-
+        </div>
     </main>
 
-    <!-- CapCut-Style Timeline Navbar Fixed at the Bottom -->
-    <nav class="timeline-nav">
-        <div class="timeline-header">
-            <span>TIMELINE TRACK V1</span>
-            <span class="zoom-level">100%</span>
+    <!-- Minimalist Footer -->
+    <footer class="footer-bar">
+        <div class="location-text">based in Lagos, Nigeria.</div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Hire Me</a>
         </div>
-        <div class="timeline-tracks">
-            <a href="index.html" class="clip">
-                <span class="clip-label">Home</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="about.html" class="clip active">
-                <span class="clip-label">About Me</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="services.html" class="clip">
-                <span class="clip-label">Services</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="#gallery" class="clip">
-                <span class="clip-label">Gallery & Works</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="contact.html" class="clip">
-                <span class="clip-label">Contact Me</span>
-                <span class="cut-marker"></span>
-            </a>
-        </div>
-    </nav>
+    </footer>
 
     <!-- JavaScript File -->
     <script src="about.script.js"></script>

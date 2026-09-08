@@ -3,95 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Contact | Princewill Tola</title>
+    <title>Hire Me | Princewill Tola</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="contact.style.css">
 </head>
 <body>
 
-    <!-- Top Utility Bar -->
+    <!-- Minimalist Top Bar -->
     <header class="top-bar">
-        <div class="brand">PRINCEWILL TOLA</div>
-        <div class="status-indicator">STATUS: <span class="live-dot"></span> AVAILABLE FOR HIRE</div>
+        <a href="index.html" class="brand">Princewill<span class="dot">.</span></a>
+        
+        <!-- Desktop Nav Links -->
+        <nav class="nav-links">
+            <a href="about.html">About Me</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html" class="active-link">Hire Me</a>
+        </nav>
+
+        <div class="top-actions">
+            <a href="contact.html" class="cta-badge desktop-only">princewill3399@gmail.com</a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
     </header>
+
+    <!-- Mobile Navigation Overlay Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-content">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">About Me</a>
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="gallery.html" class="mobile-link">Gallery</a>
+            <a href="contact.html" class="mobile-link highlight">Hire Me</a>
+            <div class="mobile-footer-info">
+                <span>based in Lagos, Nigeria</span>
+                <a href="mailto:princewill3399@gmail.com">princewill3399@gmail.com</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Main Contact Workspace -->
     <main class="contact-workspace">
         <div class="contact-container">
             
-            <div class="section-title-wrapper">
-                <h1 class="contact-header">GET IN TOUCH</h1>
-                <p class="contact-sub">Let's collaborate on your next video production or creative project.</p>
+            <div class="contact-header-area">
+                <h1 class="contact-header">LET'S CREATE TOGETHER</h1>
+                <p class="contact-sub">Have a project in mind or want to discuss a collaboration? Fill out the brief below or reach out directly.</p>
             </div>
 
-            <!-- Two-Column Contact Layout -->
             <div class="contact-grid">
                 
-                <!-- Left Column: Direct Info & Socials -->
-                <div class="contact-info-card">
-                    <div class="corner tl"></div><div class="corner tr"></div>
-                    <div class="corner bl"></div><div class="corner br"></div>
-                    
-                    <div class="info-group">
-                        <span class="track-id">CHANNELS</span>
-                        <h3>CONTACT ME</h3>
+                <!-- Contact Form Section -->
+                <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
                     </div>
 
-                    <div class="contact-methods">
-                        <a href="mailto:princewill@example.com" class="method-item">
-                            <span class="method-icon">✉</span>
-                            <div class="method-details">
-                                <span class="method-label">Email Address</span>
-                                <span class="method-value">princewill3399@gmail.com</span>
-                            </div>
-                        </a>
-
-                        <a href="tel:+2349090017930" class="method-item">
-                            <span class="method-icon">📞</span>
-                            <div class="method-details">
-                                <span class="method-label">Phone Number</span>
-                                <span class="method-value">+234 909 001 7930</span>
-                            </div>
-                        </a>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
                     </div>
 
-                    <div class="social-section">
-                        <span class="method-label">Social Networks</span>
-                        <div class="social-links">
-                            <a href="https://instagram.com/@princedeshooter" target="_blank" class="social-btn">Instagram</a>
-                            <a href="https://tiktok.com" target="_blank" class="social-btn">TikTok</a>
-                            <a href="https://youtube.com" target="_blank" class="social-btn">YouTube</a>
-                            <a href="https://linkedin.com" target="_blank" class="social-btn">LinkedIn</a>
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+                        <select id="service" name="service">
+                            <option value="Creative Direction">Creative Direction</option>
+                            <option value="Videography & Drone">Videography & Drone Cinematography</option>
+                            <option value="Photography">Photography</option>
+                            <option value="AI-Assisted Production">AI-Assisted Production</option>
+                            <option value="Post-Production">Post-Production</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell me about your timeline, goals, and vision..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                </form>
+
+                <!-- Direct Details / Info Sidebar -->
+                <div class="contact-info-sidebar">
+                    <div class="info-block">
+                        <span class="info-label">DIRECT EMAIL</span>
+                        <a href="mailto:princewill3399@gmail.com" class="info-value">princewill3399@gmail.com</a>
+                    </div>
+
+                    <div class="info-block">
+                        <span class="info-label">LOCATION</span>
+                        <p class="info-value">Lagos, Nigeria (Available Worldwide)</p>
+                    </div>
+
+                    <div class="info-block">
+                        <span class="info-label">SOCIAL CHANNELS</span>
+                        <div class="social-links-list">
+                            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X</a>
                         </div>
                     </div>
-                </div>
-
-                <!-- Right Column: Simple Contact Form -->
-                <div class="contact-form-card">
-                    <div class="corner tl"></div><div class="corner tr"></div>
-                    <div class="corner bl"></div><div class="corner br"></div>
-
-                    <form id="contactForm" onsubmit="handleFormSubmit(event)">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Project Details / Message</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Tell me about your project, timeline, and budget..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn">SEND MESSAGE</button>
-                        <p id="formStatus" class="form-status-msg"></p>
-                    </form>
                 </div>
 
             </div>
@@ -99,35 +118,16 @@
         </div>
     </main>
 
-    <!-- CapCut-Style Timeline Navbar Fixed at the Bottom -->
-    <nav class="timeline-nav">
-        <div class="timeline-header">
-            <span>TIMELINE TRACK V1</span>
-            <span class="zoom-level">100%</span>
+    <!-- Minimalist Footer -->
+    <footer class="footer-bar">
+        <div class="location-text">based in Lagos, Nigeria.</div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
         </div>
-        <div class="timeline-tracks">
-            <a href="index.html" class="clip">
-                <span class="clip-label">Home</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="about.html" class="clip">
-                <span class="clip-label">About Me</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="services.html" class="clip">
-                <span class="clip-label">Services</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="gallery.html" class="clip">
-                <span class="clip-label">Gallery & Works</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="contact.html" class="clip active">
-                <span class="clip-label">Contact Me</span>
-                <span class="cut-marker"></span>
-            </a>
-        </div>
-    </nav>
+    </footer>
 
     <!-- JavaScript File -->
     <script src="contact.script.js"></script>

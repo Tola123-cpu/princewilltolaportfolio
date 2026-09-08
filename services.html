@@ -6,20 +6,51 @@
     <title>Services | Princewill Tola</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="services.style.css">
 </head>
 <body>
 
-    <!-- Top Utility Bar -->
+    <!-- Minimalist Top Bar -->
     <header class="top-bar">
-        <div class="brand">PRINCEWILL TOLA</div>
-        <div class="status-indicator">STATUS: <span class="live-dot"></span> AVAILABLE FOR HIRE</div>
+        <a href="index.html" class="brand">Princewill<span class="dot">.</span></a>
+        
+        <!-- Desktop Nav Links -->
+        <nav class="nav-links">
+            <a href="about.html">About Me</a>
+            <a href="services.html" class="active-link">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Hire Me</a>
+        </nav>
+
+        <div class="top-actions">
+            <a href="contact.html" class="cta-badge desktop-only">princewill3399@gmail.com</a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
     </header>
+
+    <!-- Mobile Navigation Overlay Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-content">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">About Me</a>
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="gallery.html" class="mobile-link">Gallery</a>
+            <a href="contact.html" class="mobile-link highlight">Hire Me</a>
+            <div class="mobile-footer-info">
+                <span>based in Lagos, Nigeria</span>
+                <a href="mailto:princewill3399@gmail.com">princewill3399@gmail.com</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Main Services Workspace -->
     <main class="services-workspace">
-        
         <div class="services-container">
             <div class="section-title-wrapper">
                 <h1 class="services-header">SERVICES & EXPERTISE</h1>
@@ -31,32 +62,32 @@
                 
                 <div class="service-card">
                     <span class="track-id">TRACK 01</span>
-                    <h3>Creative Direction</h3>
-                    <p>Conceptualizing visual strategies, mood boards, and aesthetic frameworks that give your brand a distinct voice.</p>
+                    <h3 class="service-title">Creative Direction</h3>
+                    <p class="service-desc">Conceptualizing visual strategies, mood boards, and aesthetic frameworks that give your brand a distinct voice.</p>
                 </div>
 
                 <div class="service-card">
                     <span class="track-id">TRACK 02</span>
-                    <h3>Videography & Drone Cinematography</h3>
-                    <p>Capturing breathtaking cinematic ground and aerial footage with precision, high-end gear, and dynamic movement.</p>
+                    <h3 class="service-title">Videography & Drone Cinematography</h3>
+                    <p class="service-desc">Capturing breathtaking cinematic ground and aerial footage with precision, high-end gear, and dynamic movement.</p>
                 </div>
 
                 <div class="service-card">
                     <span class="track-id">TRACK 03</span>
-                    <h3>Photography</h3>
-                    <p>Commercial, luxury, and brand photography designed to stop the scroll and project absolute authority.</p>
+                    <h3 class="service-title">Photography</h3>
+                    <p class="service-desc">Commercial, luxury, and brand photography designed to stop the scroll and project absolute authority.</p>
                 </div>
 
                 <div class="service-card">
                     <span class="track-id">TRACK 04</span>
-                    <h3>AI-Assisted Production</h3>
-                    <p>Integrating cutting-edge AI workflows to accelerate generation, prototyping, and visual effects pipelines.</p>
+                    <h3 class="service-title">AI-Assisted Production</h3>
+                    <p class="service-desc">Integrating cutting-edge AI workflows to accelerate generation, prototyping, and visual effects pipelines.</p>
                 </div>
 
                 <div class="service-card full-width-card">
                     <span class="track-id">TRACK 05</span>
-                    <h3>Post-Production</h3>
-                    <p>Advanced editing, color grading, sound design, and motion graphics that stitch raw footage into cinematic masterpieces.</p>
+                    <h3 class="service-title">Post-Production</h3>
+                    <p class="service-desc">Advanced editing, color grading, sound design, and motion graphics that stitch raw footage into cinematic masterpieces.</p>
                 </div>
 
             </div>
@@ -65,47 +96,27 @@
             <div class="clients-section">
                 <h4 class="clients-title">TRUSTED BY INDUSTRY LEADERS & BRANDS</h4>
                 <div class="client-logos-grid">
-                    <!-- Replace these with actual <img> tags for your client logos -->
                     <div class="client-logo-item">Sujimoto</div>
-                    <div class="client-logo-item">Brand Logo 2</div>
-                    <div class="client-logo-item">Brand Logo 3</div>
-                    <div class="client-logo-item">Brand Logo 4</div>
+                    <div class="client-logo-item">GTCO</div>
+                    <div class="client-logo-item">McVitie's Nigeria</div>
+                    <div class="client-logo-item">Haansbro</div>
                 </div>
             </div>
 
         </div>
-
     </main>
 
-    <!-- CapCut-Style Timeline Navbar Fixed at the Bottom -->
-    <nav class="timeline-nav">
-        <div class="timeline-header">
-            <span>TIMELINE TRACK V1</span>
-            <span class="zoom-level">100%</span>
+    <!-- Minimalist Footer -->
+    <footer class="footer-bar">
+        <div class="location-text">based in Lagos, Nigeria.</div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Hire Me</a>
         </div>
-        <div class="timeline-tracks">
-            <a href="index.html" class="clip">
-                <span class="clip-label">Home</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="about.html" class="clip">
-                <span class="clip-label">About Me</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="services.html" class="clip active">
-                <span class="clip-label">Services</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="gallery.html" class="clip">
-                <span class="clip-label">Gallery & Works</span>
-                <span class="cut-marker"></span>
-            </a>
-            <a href="contact.html" class="clip">
-                <span class="clip-label">Contact Me</span>
-                <span class="cut-marker"></span>
-            </a>
-        </div>
-    </nav>
+    </footer>
 
     <!-- JavaScript File -->
     <script src="services.script.js"></script>
