@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Hire Me | Princewill Tola</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="portrait.jpeg">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="contact.style.css">
 </head>
+
 <body>
 
     <!-- Minimalist Top Bar -->
     <header class="top-bar">
         <a href="index.html" class="brand">Princewill<span class="dot">.</span></a>
-        
+
         <!-- Desktop Nav Links -->
         <nav class="nav-links">
             <a href="about.html">About Me</a>
@@ -25,7 +28,7 @@
 
         <div class="top-actions">
             <a href="contact.html" class="cta-badge desktop-only">princewill3399@gmail.com</a>
-            
+
             <!-- Mobile Menu Toggle Button -->
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
                 <span class="bar"></span>
@@ -52,50 +55,61 @@
     <!-- Main Contact Workspace -->
     <main class="contact-workspace">
         <div class="contact-container">
-            
+
             <div class="contact-header-area">
                 <h1 class="contact-header">LET'S CREATE TOGETHER</h1>
-                <p class="contact-sub">Have a project in mind or want to discuss a collaboration? Fill out the brief below or reach out directly.</p>
+                <p class="contact-sub">Have a project in mind or want to discuss a collaboration? Fill out the brief
+                    below or reach out directly.</p>
             </div>
 
             <div class="contact-grid">
-                
+
                 <!-- Contact Form Section -->
-                <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <form action="https://formsubmit.co/princewill3399@gmail.com" method="POST" class="contact-form">
+
+                    <!-- Honeypot Anti-Spam Field (keeps bots from spamming your inbox) -->
+                    <input type="text" name="_honey" style="display:none">
+
+                    <!-- Disable Captcha (Optional: remove this if you want a captcha check) -->
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <!-- Redirect user back to a thank you section or page after submission (Optional) -->
+                    <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
+
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
                     </div>
 
                     <div class="form-group">
                         <label for="service">Service Needed</label>
                         <select id="service" name="service">
-                            <option value="Creative Direction">Creative Direction</option>
-                            <option value="Videography & Drone">Videography & Drone Cinematography</option>
+                            <option value="Commercial & Brand Video">Commercial & Brand Video</option>
+                            <option value="Drone Cinematography">Drone Cinematography</option>
                             <option value="Photography">Photography</option>
-                            <option value="AI-Assisted Production">AI-Assisted Production</option>
-                            <option value="Post-Production">Post-Production</option>
+                            <option value="Other Project">Other Project</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Project Details</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell me about your timeline, goals, and vision..." required></textarea>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Tell me about your project timeline and vision..." required></textarea>
                     </div>
 
-                    <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                    <button type="submit" class="submit-btn">Send Message</button>
                 </form>
 
                 <!-- Direct Details / Info Sidebar -->
                 <div class="contact-info-sidebar">
                     <div class="info-block">
                         <span class="info-label">DIRECT EMAIL</span>
-                        <a href="mailto:princewill3399@gmail.com" class="info-value">princewill3399@gmail.com</a>
+                        <a href="mailto:tolaayomikun9@gmail.com" class="info-value">tolaayomikun9@gmail.com</a>
                     </div>
 
                     <div class="info-block">
@@ -107,8 +121,7 @@
                         <span class="info-label">SOCIAL CHANNELS</span>
                         <div class="social-links-list">
                             <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-                            <a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X</a>
+                            <a href="https://tiktok.com/@princedeshooter_" target="_blank" rel="noopener">TikTok</a>
                         </div>
                     </div>
                 </div>
@@ -132,4 +145,5 @@
     <!-- JavaScript File -->
     <script src="contact.script.js"></script>
 </body>
+
 </html>
