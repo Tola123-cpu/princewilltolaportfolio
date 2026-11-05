@@ -57,18 +57,18 @@
             <div class="gallery-header-area">
                 <div class="header-titles">
                     <h1 class="gallery-header">PORTFOLIO</h1>
-                    <p class="gallery-sub">Explore commercial frames, drone cinematography, and motion reels.</p>
+                    <p class="gallery-sub">Explore commercial frames, drone cinematography, and motion stills.</p>
                 </div>
 
-                <!-- Tab Switcher Buttons -->
-                <div class="view-switcher">
-                    <button class="switch-btn active" data-target="reels-section">Reels</button>
-                    <button class="switch-btn" data-target="photos-section">Gallery</button>
+                <!-- Tab Switcher Buttons (Reels hidden for now, Gallery set as active) -->
+                <div class="view-switcher" style="display: none;">
+                    <button class="switch-btn" data-target="reels-section">Reels</button>
+                    <button class="switch-btn active" data-target="photos-section">Gallery</button>
                 </div>
             </div>
 
-            <!-- SECTION 1: REELS FEED -->
-            <div id="reels-section" class="portfolio-section active">
+            <!-- SECTION 1: REELS FEED (Hidden safely here for later) -->
+            <div id="reels-section" class="portfolio-section" style="display: none;">
                 <div class="reels-feed">
                     
                     <!-- Reel Item 1 -->
@@ -83,7 +83,9 @@
 
                     <!-- Reel Item 2 -->
                     <div class="reel-card">
-                        <div class="reel-video-wrapper">
+
+Max, [05/11/2026 12:19]
+<div class="reel-video-wrapper">
                             <video controls muted loop playsinline preload="metadata" class="reel-media">
                                 <source src="https://3cksc1kidqxadoyv.public.blob.vercel-storage.com/vids/Final%20Comp.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
@@ -145,7 +147,10 @@
                     <div class="reel-card">
                         <div class="reel-video-wrapper">
                             <video controls muted loop playsinline preload="metadata" class="reel-media">
-                                <source src="https://3cksc1kidqxadoyv.public.blob.vercel-storage.com/vids/This%20Exceptional%20%204-bedroom%20maisonette%20%20with%20a%20BQ%20%20is%2070%25%20completed%20and%20has%20a%2012%20month%20payment%20plan%20available%20%20in%20Ikoyi%2C%20redefines%20elegance%20at%20N500m..Location-%20Ikoyi.Price%20-%20N600mFeaturesCCTV%20Security%20Automated%20Acc.mp4" type="video/mp4">
+                                <source src="https://3cksc1kidqxadoyv.public.blob.vercel-storage.com/vids/This%20Exceptional%20%204-bedroom%20maisonette%20%20with%20a%20BQ%20%20is%2070%25%20completed%20and%20has%20a%2012%20month%20payment%20plan%20available%20%20in%20Ikoyi%2C%20redefines%20elegance%20at%20N500m..Location-%20Ikoyi.Price%20-%20N600mFeaturesCCTV%20Security%20Automated%20Acc.mp4"
+
+Max, [05/11/2026 12:19]
+type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -164,8 +169,8 @@
                 </div>
             </div>
 
-            <!-- SECTION 2: PHOTOGRAPHY SLIDESHOW GALLERY -->
-            <div id="photos-section" class="portfolio-section">
+            <!-- SECTION 2: PHOTOGRAPHY SLIDESHOW GALLERY (Active & Visible) -->
+            <div id="photos-section" class="portfolio-section active" style="display: block;">
                 <div class="slideshow-container">
                     
                     <!-- Main Active Large Slide View -->
@@ -200,7 +205,9 @@
                         <div class="thumb-item" data-index="8"><img src="imgs/gallery18.jpeg" alt="Thumbnail 9"></div>
                         <div class="thumb-item" data-index="9"><img src="imgs/gallery17.jpeg" alt="Thumbnail 10"></div>
                         <div class="thumb-item" data-index="10"><img src="imgs/gallery16.jpeg" alt="Thumbnail 11"></div>
-                        <div class="thumb-item" data-index="11"><img src="imgs/gallery20.jpeg" alt="Thumbnail 12"></div>
+
+Max, [05/11/2026 12:19]
+<div class="thumb-item" data-index="11"><img src="imgs/gallery20.jpeg" alt="Thumbnail 12"></div>
                         <div class="thumb-item" data-index="12"><img src="imgs/gallery21.jpeg" alt="Thumbnail 13"></div>
                         <div class="thumb-item" data-index="13"><img src="imgs/gallery22.jpeg" alt="Thumbnail 14"></div>
                         <div class="thumb-item" data-index="14"><img src="imgs/gallery1.jpeg" alt="Thumbnail 15"></div>
@@ -254,12 +261,10 @@
         </div>
 
         <!-- Lightbox Thumbnail Strip at Bottom -->
-        <div class="lightbox-thumbs-bar" id="lbThumbsTrack">
-            <!-- Thumbnails mirrored here dynamically via JS or HTML elements -->
-        </div>
+        <div class="lightbox-thumbs-bar" id="lbThumbsTrack"></div>
     </div>
 
-    <!-- Minimalist Footer -->
+<!-- Minimalist Footer -->
     <footer class="footer-bar">
         <div class="location-text">based in Lagos, Nigeria.</div>
         <div class="footer-links">
